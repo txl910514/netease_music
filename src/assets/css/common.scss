@@ -1,0 +1,374 @@
+.tmn {
+  font-weight: bolder;
+  font-size:$fontSize;
+  //transform:rotate(37deg);
+}
+img {
+  max-width: 100%;
+}
+.center{
+  text-align: center;
+}
+
+.flex_container_default{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:nowrap ;
+  justify-content: flex-start;
+  flex:1;
+}
+
+.flex_container_vertical{
+  display: flex;
+  flex-direction: column ;
+  flex-wrap:nowrap ;
+  justify-content: flex-start;
+  flex:1;
+}
+table{
+  border-collapse:collapse;
+}
+th,td{
+  margin: 0px;
+  padding:0px;
+}
+.assembly_container {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.flex_title {
+  padding-bottom: 1%;
+  flex-shrink:0;
+  color: #aec7d9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: normal;
+}
+.flex_content{
+  //background: blue;
+  flex-shrink:1;
+  flex-grow: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.flex_title_bill{
+  >a{
+    >span{
+      color: #ee6d6d;
+    }
+  }
+}
+
+//设备信息模块样式
+.equipment_div_info{
+  .flex-ul{
+    justify-content: flex-start;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-shrink: 0;
+    flex-basis: 36px;
+    border-bottom: 1px solid #2f3a43;
+    overflow: hidden;
+    >li{
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      color: #ebf5f8;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 1%;
+      box-sizing: border-box;
+      &:nth-child(1){
+        width: 15%;
+      }
+      &:nth-child(2){
+        width: 22%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 1%;
+        box-sizing: content-box;
+      }
+      &:nth-child(3){
+        width: 20%;
+      }
+      &:nth-child(4){
+        width: 9%;
+        padding-right: 1%;
+      }
+      &:nth-child(5){
+        width: 23%;
+      }
+      &:nth-child(6){
+        width: 9%;
+      }
+    }
+  }
+  .subcompany_able {
+    .flex-ul {
+      >li {
+        width: 33.3%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 2%;
+      }
+    }
+  }
+  .hospital_able {
+    .flex-ul {
+      >li {
+        width: 33.3%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 2%;
+        &:nth-child(1) {
+          width: 45%;
+        }
+        &:nth-child(2) {
+          width: 25%;
+        }
+        &:nth-child(3) {
+          width: 30%;
+        }
+      }
+    }
+  }
+  .flex-ul-list{
+    >li{
+      color: #899baa;
+    }
+  }
+  .outTime_days{
+    color:#ee6d6d;
+    padding-left:2px
+  }
+  .state-red{
+    background: #ee6d6d;
+    display: inline-block;
+    margin: 0 4px 0 0;
+    line-height: 15px;
+  }
+  .state-yellow{
+    background: #e8bd3a;
+    display: inline-block;
+    margin: 0 4px 0 0;
+    line-height: 15px;
+  }
+  .state-green{
+    background: #2ede7d;
+    display: inline-block;
+    margin: 0 4px 0 0;
+    line-height: 15px;
+  }
+  .state-blue{
+    background: #2ea6de;
+    display: inline-block;
+    margin: 0 4px 0 0;
+    line-height: 15px;
+  }
+  .state-bg{
+    background: #1f2a33;
+    display: inline-block;
+    margin: 0 4px 0 0;
+    line-height: 15px;
+  }
+}
+
+
+.devicePandect {
+  flex: 1;
+}
+.devicePandect, .total_cost {
+  .glance_item{
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    [data-v="Safari"] & {
+      height: 105px;
+    }
+    .text_typeName {
+      fill: #899baa;
+    }
+    .text_value {
+      fill: #ebf5f8;
+    }
+    .text_unit {
+      fill: #ebf5f8;
+    }
+  }
+}
+.total_cost {
+  padding-top:8%;
+  padding-bottom: 2%;
+  box-sizing: border-box;
+  overflow: hidden;
+  .glance_item {
+    overflow: hidden;
+    svg {
+      overflow: hidden;
+    }
+    .text_typeName {
+    }
+    .text_value {
+    }
+    .text_unit {
+    }
+  }
+}
+.cost_ranking {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.deviceService {
+  flex: 1;
+  .glance_item{
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    [data-v="Safari"] & {
+      height: 105px;
+    }
+    .path--background {
+      fill: #899baa;
+      stroke: #000;
+      stroke-width: 0px;
+    }
+
+    .label {
+      text-anchor: middle;
+      fill: #fff;
+    }
+    .textLabel{
+      fill: #ebf5f8;
+      &.valueText {
+      }
+      &.statusName {
+        fill: #899baa;
+      }
+    }
+    .textLabel1{
+      fill: #899baa;
+    }
+  }
+}
+.keynoteDevice {
+  .path--background {
+    fill: #899baa;
+    stroke: #000;
+    stroke-width: 0px;
+  }
+  .textLabel{
+    fill: #ebf5f8;
+    &.valueText {
+    }
+    &.statusName {
+      fill: #899baa;
+    }
+  }
+  .polylineLabel {
+    
+    fill: #ebf5f8;
+  }
+  .percentLabel{
+   
+  }
+  .label{
+   
+  }
+  .titleText {
+   
+    fill: #aec7d9;
+  }
+}
+
+
+.value_container{
+  .flex_content {
+    .nameText {
+      fill: #899baa;
+     
+    }
+    .labelText {
+      fill: #fff;
+     
+    }
+    .circlevalueTotal circle{
+      fill: #2f4656;
+    }
+    .contextvalueTotal rect {
+      fill: #2f4656;
+    }
+  }
+}
+
+.life_container{
+  .flex_content {
+    .nameText {
+      fill: #899baa;
+     
+    }
+    .labelText {
+      fill: #fff;
+     
+    }
+    .contextlifeTotal rect {
+      fill: #2f4656;
+    }
+  }
+}
+
+.technical_container{
+  .flex_content {
+    .nameText {
+      fill: #899baa;
+      
+    }
+    .labelText {
+      fill: #fff;
+    }
+    .recttotal rect {
+      fill: #2f4656;
+    }
+  }
+}
+.technizcal_repair_container{
+  .flex_content {
+    .percentLabel{
+    }
+    .label{
+    }
+    .centerLabel {
+      &.totalText{
+        fill: #899baa;
+      }
+      &.totalNum{
+        fill: #fff;
+      }
+    }
+    .legends {
+
+      .legendName {
+        fill: #899baa;
+      }
+      .legendPercent {
+        fill: #899baa;
+      }
+    }
+  }
+}
+
+.anchorBL {
+  display: none;
+}

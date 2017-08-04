@@ -42,7 +42,7 @@ if (shell.which('npm')) {
     versionRequirement: packageConfig.engines.npm
   })
 }
-console.log(semver.satisfies('4.8.2', '>= 4.5.6'))  // 如果版本满足范围，返回true
+// console.log(semver.satisfies('4.8.2', '>= 4.5.6'))  // 如果版本满足范围，返回true
 module.exports = function () {
   var warnings = []
   // 依次判断版本是否符合要求

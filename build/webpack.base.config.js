@@ -8,6 +8,12 @@ var config = require('../config')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+function resolve_base () {
+  if (!process.env.NODE_ENV) {
+    return resolve('src/config/service_dev.js');
+  }
+  return resolve('src/config/service_' + process.env.NODE_ENV + '.js');
+}
 var pngUse = [
   {
     loader: 'url-loader',
@@ -17,7 +23,7 @@ var pngUse = [
     }
   }
 ]
-
+console.log(process.env.extract)
 if (process.env.NODE_ENV !== 'dev') {
   pngUse.push('image-webpack-loader'); // 压缩图片
 }
@@ -33,6 +39,7 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
+      '@/config/service_dev.js': resolve_base(),
       '@': resolve('src')
     }
   },
@@ -52,7 +59,7 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: utils.cssLoaders({
-            extract: process.env.NODE_ENV !== 'dev'
+            extract: process.env.extract !== 'false'
           })
         }
       },
@@ -93,12 +100,6 @@ module.exports = {
       'process.env': {
         NODE_ENV: '"' + process.env.NODE_ENV + '"'
       }
-    }),
-    new webpack.ProvidePlugin({
-      $:"jquery",
-      jQuery:"jquery",
-      "window.$":"jquery",
-      "window.jQuery":"jquery"
     })
   ]
 }

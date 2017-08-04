@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <router-view></router-view>
+        <transition>
+            <router-view></router-view>
+        </transition>
     </div>
 </template>
 
@@ -22,5 +24,10 @@
 <style lang="scss">
     #app {
         background: #877;
+        position: absolute;
+        top:0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
     }
 </style>
